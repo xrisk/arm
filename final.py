@@ -7,7 +7,9 @@ from whatup import *
 # x = int(input("x:"))
 # y = int(input("y:"))
 
-x, y, fx, fy = udharja()
+x, y, fx, fy = (
+    udharja()
+)  # (x, y) are coordinates of where tthe object is. (fx, fy) for final position.
 print(x, y, fx, fy)
 a = dxl.get_available_ports()
 print(a)
@@ -15,11 +17,12 @@ d = dxl.dxl(a[0], 1000000)
 print(d.scan(10))
 
 
-def ghum(x, y, z, a, b):
-
+def ghum(
+    x, y, z, a, b
+):  # (x, y) are coords to move to. z is positon of arm either to be up or down. a is for the stationary motor. b is for gripper angle initially.
     # lengths
-    a2 = 10.5
-    a4 = 11.5
+    a2 = 10.5  # shoulder to elbow
+    a4 = 11.5  # elbow to wrist
 
     if x <= 0:
         x += 2

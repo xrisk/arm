@@ -55,8 +55,8 @@ def move_to(
     theta_2 = map(theta_2, -150, +150, 0, 1023)
     theta_1 = map(theta_1, -150, +150, 0, 1023)
 
-    m_upper.write(Instruction.GOAL_POSITION, theta_2))
-    m_lower.write(Instruction.GOAL_POSITION, theta_1))
+    m_upper.write(Instruction.GOAL_POSITION, theta_2)
+    m_lower.write(Instruction.GOAL_POSITION, theta_1)
 
 # for x_start in rage()
 # move_to(0, 17)
